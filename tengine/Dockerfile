@@ -32,7 +32,7 @@ RUN apk add --no-cache make gcc musl-dev linux-headers perl pcre-dev openssl-dev
 	&& addgroup -S www \
 	&& adduser -D -S -h /home -s /sbin/nologin -G www www \
 	&& ln -s /usr/local/nginx/sbin/nginx /usr/local/bin/nginx \
-	&& addgroup -g 82 -S www-data && adduser -u 82 -D -S -G www-data www-data \
+	&& adduser -u 82 -D -S -G www-data www-data \
 	&& apk del gcc linux-headers musl-dev make perl openssl-dev \
 	&& rm -rf ~/* ~/.git ~/.gitignore ~/.travis.yml ~/.ash_history \
 	&& rm -rf /root/* \
