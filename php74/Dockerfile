@@ -159,10 +159,9 @@ RUN set -eux; \
 		--with-zlib \
 		--with-mysqli=mysqlnd \
 		--with-pdo-mysql=mysqlnd \
-		--with-gd \
-		--with-jpeg-dir \
-		--with-png-dir \
-		--with-freetype-dir \
+		--enable-gd \
+		--with-jpeg \
+		--with-freetype \
 		--with-zlib-dir \
 		\
 # https://github.com/bwoebi/phpdbg-docs/issues/1#issuecomment-163872806 ("phpdbg is primarily a CLI debugger, and is not suitable for debugging an fpm stack.")
