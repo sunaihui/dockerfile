@@ -103,6 +103,12 @@ RUN set -eux; \
 		openssl-dev \
 		readline-dev \
 		sqlite-dev \
+		gd-dev \
+		jpeg-dev \
+		libpng-dev \
+		freetype-dev \
+		zlib-dev \
+		libzip-dev \
 	; \
 	\
 # make sure musl's iconv doesn't get used (https://www.php.net/manual/en/intro.iconv.php)
@@ -151,6 +157,13 @@ RUN set -eux; \
 		--with-openssl \
 		--with-readline \
 		--with-zlib \
+		--with-mysqli=mysqlnd \
+		--with-pdo-mysql=mysqlnd \
+		--with-gd \
+		--with-jpeg-dir \
+		--with-png-dir \
+		--with-freetype-dir \
+		--with-zlib-dir \
 		\
 # https://github.com/bwoebi/phpdbg-docs/issues/1#issuecomment-163872806 ("phpdbg is primarily a CLI debugger, and is not suitable for debugging an fpm stack.")
 		--disable-phpdbg \
