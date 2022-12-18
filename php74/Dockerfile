@@ -157,12 +157,15 @@ RUN set -eux; \
 		--with-openssl \
 		--with-readline \
 		--with-zlib \
+		--enable-bcmath \
+		--enable-sockets \
+		--enable-pdo \
+		--with-zip \
 		--with-mysqli=mysqlnd \
 		--with-pdo-mysql=mysqlnd \
 		--enable-gd \
 		--with-jpeg \
 		--with-freetype \
-		--with-zlib-dir \
 		\
 # https://github.com/bwoebi/phpdbg-docs/issues/1#issuecomment-163872806 ("phpdbg is primarily a CLI debugger, and is not suitable for debugging an fpm stack.")
 		--disable-phpdbg \
